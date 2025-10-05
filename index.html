@@ -2,16 +2,40 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Главная страница</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assignments: Name Surname</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>/* minimal inline fallback */</style>
 </head>
 <body>
-  <h1>Добро пожаловать!</h1>
-  <nav>
-    <ul>
-      <li><a href="section1/index.html">Section 1 — 20 Assignments</a></li>
-      <li><a href="section2/index.html">Section 2 — 10 Assignments</a></li>
-    </ul>
-  </nav>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="site-title">Assignments: Kairat Kubatov</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="container">
+      <h1>Assignments Dashboard</h1>
+      <p class="lead">Choose a section to open assignments.</p>
+
+      <div class="sections-grid">
+        <div class="card">
+          <h2>Section 1</h2>
+          <p class="lead">20 assignments</p>
+          <a class="back-link" href="section1/index.html">Open Section 1</a>
+        </div>
+        <div class="card">
+          <h2>Section 2</h2>
+          <p class="lead">5 assignments</p>
+          <a class="back-link" href="section2/index.html">Open Section 2</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Offline practice site — local files only.</p>
+  </footer>
 </body>
 </html>

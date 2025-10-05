@@ -1,9 +1,9 @@
 :root{
-  --bg-1: linear-gradient(180deg,#0b0b0b 0%, #120303 100%); /* black -> deep red */
-  --card-bg: linear-gradient(180deg,#0f0f0f,#1a0a0a);
-  --muted: #cbd5e1; /* light muted */
-  --accent: #ff3b3b; /* strong red */
-  --accent-2: #ff6b6b; /* softer red */
+  --bg-1: #0b0b0b; /* exact background requested */
+  --card-bg: #0f0f0f;
+  --muted: #d1d5db;
+  --accent: #ff3b3b;
+  --accent-2: #ff6b6b;
   --accent-3: #ffd7d7;
   --text-on-dark: #ffffff;
   --max-width: 1000px;
@@ -12,7 +12,7 @@
 *{box-sizing:border-box}
 body{
   margin:0;
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: Arial, Helvetica, sans-serif; /* use Arial as requested */
   color:var(--text-on-dark);
   background: var(--bg-1);
   -webkit-font-smoothing:antialiased;
@@ -21,10 +21,10 @@ body{
 }
 
 .site-header{
-  background: linear-gradient(90deg, rgba(255,59,59,0.14), rgba(255,107,107,0.08));
+  background: transparent;
   color:var(--text-on-dark);
   padding:1.25rem 1rem;
-  border-bottom:1px solid rgba(255,59,59,0.08);
+  border-bottom:1px solid rgba(255,255,255,0.03);
 }
 .site-header .wrap{
   max-width:var(--max-width);
