@@ -1,0 +1,106 @@
+:root{
+  --bg-1: linear-gradient(180deg,#0b0b0b 0%, #120303 100%); /* black -> deep red */
+  --card-bg: linear-gradient(180deg,#0f0f0f,#1a0a0a);
+  --muted: #cbd5e1; /* light muted */
+  --accent: #ff3b3b; /* strong red */
+  --accent-2: #ff6b6b; /* softer red */
+  --accent-3: #ffd7d7;
+  --text-on-dark: #ffffff;
+  --max-width: 1000px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--text-on-dark);
+  background: var(--bg-1);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+.site-header{
+  background: linear-gradient(90deg, rgba(255,59,59,0.14), rgba(255,107,107,0.08));
+  color:var(--text-on-dark);
+  padding:1.25rem 1rem;
+  border-bottom:1px solid rgba(255,59,59,0.08);
+}
+.site-header .wrap{
+  max-width:var(--max-width);
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+.site-title{font-size:1.25rem;font-weight:600}
+.site-title a{color:var(--text-on-dark);text-decoration:none}
+
+main{
+  max-width:var(--max-width);
+  margin:2rem auto;
+  padding:0 1rem;
+}
+
+.container{
+  background:var(--card-bg);
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.6);
+  padding:1.5rem;
+  border:1px solid rgba(255,255,255,0.03);
+}
+
+h1,h2{color:var(--text-on-dark);margin:0 0 0.5rem 0}
+
+nav ul{list-style:none;padding:0;margin:0;display:flex;gap:0.75rem;flex-wrap:wrap}
+nav a{color:var(--card-bg);}
+
+.lead{color:var(--muted);margin-bottom:1rem}
+
+/* Assignments list as cards */
+.assignments-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:0.9rem;
+  margin-top:1rem;
+}
+.card{
+  background: linear-gradient(180deg, rgba(255,59,59,0.03), rgba(255,13,13,0.02));
+  border:1px solid rgba(255,59,59,0.08);
+  padding:0.9rem 0.9rem;
+  border-radius:10px;
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.card a{display:block;color:var(--text-on-dark);font-weight:700;text-decoration:none}
+.card p{margin:0.4rem 0 0;font-size:0.95rem;color:var(--muted)}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(255,59,59,0.06)}
+
+.back-link{
+  display:inline-block;
+  margin-top:1rem;
+  padding:0.5rem 0.8rem;
+  background:transparent;
+  border-radius:8px;
+  color:var(--accent);
+  border:1px solid rgba(255,59,59,0.15);
+  text-decoration:none;
+  font-weight:700;
+}
+.back-link:hover{background:rgba(255,59,59,0.06);color:var(--text-on-dark)}
+
+/* footer */
+footer.site-footer{max-width:var(--max-width);margin:2.25rem auto 3rem;padding:0 1rem;color:var(--muted);font-size:0.95rem}
+
+/* small screens */
+@media (max-width:520px){
+  .site-header .wrap{flex-direction:column;align-items:flex-start}
+  .site-title{font-size:1rem}
+}
+
+/* Styles to gracefully style existing plain lists in HTML pages */
+ul.plain-list{list-style:none;padding:0;margin:0;display:block}
+ul.plain-list li{margin:0.5rem 0}
+
+/* keep existing nav list fallback */
+nav li{margin:0}
